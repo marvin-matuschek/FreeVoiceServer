@@ -1,0 +1,21 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    container_name: free-voice-server-app
+    ports:
+      - "12044:80"
+    volumes:
+      - ./:/app
+    working_dir: /app
+    environment:
+      WEB_DOCUMENT_ROOT: /app/public
+      WEB_DOCUMENT_INDEX: index.php
+      PHP_DATE_TIMEZONE: Europe/Berlin
+    networks:
+      - free-voice-server-network
+
+networks:
+  free-voice-server-network:
