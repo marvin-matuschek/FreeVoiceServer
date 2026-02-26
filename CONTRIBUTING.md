@@ -18,11 +18,11 @@ This guide explains how to get started with development and submit your changes.
 
 3. Add the upstream repository (optional, to keep your fork up-to-date):
 
-```bash
-git remote add upstream https://github.com/<original-org>/FreeVoiceServer.git
-```
-
+    ```bash
+    git remote add upstream https://github.com/<original-org>/FreeVoiceServer.git
+    ```
 ---
+
 
 ## 2. Development Setup
 
@@ -48,11 +48,17 @@ FreeVoiceServer is a **Symfony project running with Docker**.
 
 4. Run Symfony commands as needed inside the container:
 
-```bash
-php bin/console <command>
-```
+    ```bash
+    php bin/console <command>
+    ```
 
-> Currently, no database setup is required.
+### Setup Database
+
+1. Create the database:
+
+    ```bash
+    php bin/console doctrine:database:create
+    ```
 
 ---
 
@@ -60,11 +66,11 @@ php bin/console <command>
 
 - Branches should be created from `main`:
 
-```bash
-git checkout main
-git pull upstream main
-git checkout -b feature/my-own-branch
-```
+    ```bash
+    git checkout main
+    git pull upstream main
+    git checkout -b feature/my-own-branch
+    ```
 ---
 
 ## 4. Code Quality Checks

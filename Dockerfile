@@ -5,3 +5,5 @@ RUN pecl update-channels \
     && docker-php-ext-enable xdebug \
     && pecl clear-cache \
     && rm -rf /tmp/pear
+
+RUN apt update && apt install npm -y

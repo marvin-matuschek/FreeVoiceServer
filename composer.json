@@ -7,6 +7,9 @@
         "php": ">=8.4 <8.5",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "doctrine/doctrine-bundle": "^3.2",
+        "doctrine/doctrine-migrations-bundle": "^4.0",
+        "doctrine/orm": "^3.6",
         "symfony/console": "8.0.*",
         "symfony/dotenv": "8.0.*",
         "symfony/flex": "^2.10",
@@ -16,7 +19,8 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.94.2",
-        "phpstan/phpstan": "^2.1"
+        "phpstan/phpstan": "^2.1",
+        "symfony/maker-bundle": "^1.66"
     },
     "config": {
         "allow-plugins": {

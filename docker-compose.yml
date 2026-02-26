@@ -3,6 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    depends_on:
+      - mariadb
     restart: unless-stopped
     container_name: free-voice-server-app
     ports:
@@ -17,5 +19,29 @@ services:
     networks:
       - free-voice-server-network
 
+  mariadb:
+    image: mariadb:11.7.2
+    restart: on-failure
+    volumes: [ database:/var/lib/mysql ]
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    networks:
+      - free-voice-server-network
+
+  phpmyadmin:
+    image: phpmyadmin
+    depends_on:
+      - mariadb
+    restart: on-failure
+    ports:
+      - '12045:80'
+    environment:
+      PMA_HOST: mariadb
+    networks:
+      - free-voice-server-network
+
 networks:
   free-voice-server-network:
+
+volumes:
+  database:
