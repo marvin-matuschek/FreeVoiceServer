@@ -11,10 +11,10 @@ This guide explains how to get started with development and submit your changes.
 1. Fork the repository on GitHub.  
 2. Clone your fork locally:
 
-```bash
-git clone https://github.com/<your-username>/FreeVoiceServer.git
-cd FreeVoiceServer
-```
+    ```bash
+    git clone https://github.com/<your-username>/FreeVoiceServer.git
+    cd FreeVoiceServer
+    ```
 
 3. Add the upstream repository (optional, to keep your fork up-to-date):
 
@@ -30,21 +30,21 @@ FreeVoiceServer is a **Symfony project running with Docker**.
 
 1. Start Docker containers:
 
-```bash
-docker-compose up -d
-```
+    ```bash
+    docker-compose up -d
+    ```
 
 2. Access the app container:
 
-```bash
-docker exec -it free-voice-server-app bash
-```
+    ```bash
+    docker exec -it free-voice-server-app bash
+    ```
 
 3. Install PHP dependencies inside the container using Composer:
 
-```bash
-composer install
-```
+    ```bash
+    composer install
+    ```
 
 4. Run Symfony commands as needed inside the container:
 
@@ -67,24 +67,44 @@ git checkout -b feature/my-own-branch
 ```
 ---
 
-## 4. Submitting a Pull Request
+## 4. Code Quality Checks
+
+Before submitting a Pull Request, please ensure the following checks pass inside the container:
+
+### Code style (PHP-CS-Fixer)
+
+```bash
+composer fix-cs
+```
+
+### Static analysis (PHPStan)
+
+```bash
+composer phpstan
+```
+
+Pull Requests should only be submitted if both checks pass successfully.
+
+---
+
+## 5. Submitting a Pull Request
 
 1. Push your branch to your fork:
 
-```bash
-git push origin feature/my-own-branch
-```
+    ```bash
+    git push origin feature/my-own-branch
+    ```
 
 2. Open a **Pull Request** against the `main` branch.  
 3. Include the **reason for your changes**:
 
-> Describe **why** the changes are needed, not just what they do.  
+    > Describe **why** the changes are needed, not just what they do.  
 
 4. After submission, maintainers will review your PR and may request changes.
 
 ---
 
-## 5. Future Notes
+## 6. Future Notes
 
 - PHP-CS-Fixer for code formatting will be introduced in the future.  
 - PHPStan will be used in the future to improve static analysis and code quality.  
@@ -93,6 +113,6 @@ git push origin feature/my-own-branch
 
 ---
 
-## 6. Thank You
+## 7. Thank You
 
 Your contributions make FreeVoiceServer better and more open. Thank you for helping us build a free, decentralized communication platform.
