@@ -15,19 +15,11 @@
 
 ## Overview
 
-- [FreeVoice](#FreeVoice)
+- [FreeVoice](#freevoice---server)
 - [Overview](#Overview)
+- [Roadmap](#roadmap-)
 - [Features](#Features)
-- [Roadmap](#Roadmap)
 - [Contributing](#Contributing)
-
----
-
-## Features
-
-> No features have been developed yet. \
-> Take a look at the [roadmap](#Roadmap) to see which features are planned for the future. \
-> You can also create a pull request, issue, discussion, etc. to suggest a new feature.
 
 ---
 
@@ -50,6 +42,16 @@
   - [ ] Text communication between servers
 - [ ] Voice communication (Audio & Video)
 - [ ] End-to-end encryption for text and voice communication
+
+---
+
+## Features
+
+> No features have been developed yet. \
+> Take a look at the [roadmap](#roadmap-) to see which features are planned for the future. \
+> You can also create a pull request, issue, discussion, etc. to suggest a new feature.
+
+
 ---
 
 ## Contributing
