@@ -104,16 +104,14 @@ Pull Requests should only be submitted if both checks pass successfully.
 2. Open a **Pull Request** against the `main` branch.  
 3. Include the **reason for your changes**:
 
-    > Describe **why** the changes are needed, not just what they do.  
+    > Describe **why** the changes are needed, not just what they do.
+    > Add all relevant labels that match the PR. Don't hesitate to add the “help wanted” label if you are unsure about how to proceed.
 
 4. After submission, maintainers will review your PR and may request changes.
 
 ---
 
 ## 6. Future Notes
-
-- PHP-CS-Fixer for code formatting will be introduced in the future.  
-- PHPStan will be used in the future to improve static analysis and code quality.  
 - Writing tests is **not mandatory for now**, but PHPUnit tests will be required in the future.  
 - Contributions that improve tests, documentation, or code quality are highly appreciated.
 
