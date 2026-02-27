@@ -33,8 +33,23 @@
 
 ## Roadmap 🚀
 
-> WIP
-
+- [ ] User accounts
+  - [ ] Registration
+  - [ ] Login
+  - [ ] Password reset
+  - [ ] Account settings
+- [ ] Group management
+    - [ ] Create group
+    - [ ] Join group
+    - [ ] Leave group
+    - [ ] User-Management for group-admins
+- [ ] Text-Chats for groups
+- [ ] Cross-server communication
+  - [ ] Compatibility-checks between servers
+  - [ ] Join groups on other servers
+  - [ ] Text communication between servers
+- [ ] Voice communication (Audio & Video)
+- [ ] End-to-end encryption for text and voice communication
 ---
 
 ## Contributing
