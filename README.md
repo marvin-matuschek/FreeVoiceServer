@@ -19,6 +19,7 @@
 - [Overview](#Overview)
 - [Roadmap](#roadmap-)
 - [Features](#Features)
+- [API-Endpoints](#API-Endpoints)
 - [Contributing](#Contributing)
 
 ---
