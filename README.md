@@ -26,10 +26,9 @@
 ## Roadmap 🚀
 
 - [ ] User accounts
-  - [ ] Registration
+  - [X] Registration
   - [ ] Login
   - [ ] Password reset
-  - [ ] Account settings
 - [ ] Group management
     - [ ] Create group
     - [ ] Join group
@@ -47,10 +46,14 @@
 
 ## Features
 
-> No features have been developed yet. \
+- Registration of User accounts
+
 > Take a look at the [roadmap](#roadmap-) to see which features are planned for the future. \
 > You can also create a pull request, issue, discussion, etc. to suggest a new feature.
 
+## API-Endpoints
+
+Check out the [API documentation](docs/API.md) to learn more about the available API endpoints and how to use them.
 
 ---
 

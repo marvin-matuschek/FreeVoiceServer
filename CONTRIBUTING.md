@@ -58,7 +58,22 @@ FreeVoiceServer is a **Symfony project running with Docker**.
 
     ```bash
     php bin/console doctrine:database:create
+    php bin/console doctrine:schema:create
     ```
+
+2. Update the database if you already had a previous version of the schema:
+
+    ```bash
+    php bin/console migrations:migrate
+    ```
+
+    If your database doesn't contain any important data, you can also use:
+
+    ```bash
+    php bin/console doctrine:schema:update --force
+    ```
+   
+    > Note: Using `doctrine:schema:update --force` is not recommended for production environments, but it can be useful during development to quickly apply schema changes without creating migration files.
 
 ---
 
