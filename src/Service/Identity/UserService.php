@@ -7,6 +7,7 @@ namespace App\Service\Identity;
 use App\Entity\Identity\User;
 use App\Repository\Identity\UserRepository;
 use App\Repository\ServerRepository;
+use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Doctrine\ORM\EntityManagerInterface;
 use InvalidArgumentException;
 use LogicException;
@@ -60,7 +61,12 @@ readonly class UserService
         }
 
         $this->entityManager->persist($user);
-        $this->entityManager->flush();
+
+        try {
+            $this->entityManager->flush();
+        } catch (UniqueConstraintViolationException) {
+            throw new InvalidArgumentException('User registration failed because the provided email or username is already in use.');
+        }
 
         return $user;
     }

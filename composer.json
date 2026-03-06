@@ -10,10 +10,12 @@
         "doctrine/doctrine-bundle": "^3.2.2",
         "doctrine/doctrine-migrations-bundle": "^4.0",
         "doctrine/orm": "^3.6.2",
+        "lexik/jwt-authentication-bundle": "^3.2",
         "symfony/console": "8.0.*",
         "symfony/dotenv": "8.0.*",
         "symfony/flex": "^2.10",
         "symfony/framework-bundle": "8.0.*",
+        "symfony/rate-limiter": "8.0.*",
         "symfony/runtime": "8.0.*",
         "symfony/security-bundle": "8.0.*",
         "symfony/validator": "8.0.*",
@@ -71,6 +73,13 @@
         ],
         "phpstan": [
           "vendor/bin/phpstan"
+        ],
+        "setup": [
+          "composer install",
+          "php bin/console doctrine:database:create --if-not-exists",
+          "php bin/console doctrine:schema:create",
+          "php bin/console lexik:jwt:generate-keypair --overwrite",
+          "php bin/console app:setup"
         ]
     },
     "conflict": {

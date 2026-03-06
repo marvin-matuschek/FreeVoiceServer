@@ -28,7 +28,7 @@
 
 - [ ] User accounts
   - [X] Registration
-  - [ ] Login
+  - [X] Login
   - [ ] Password reset
 - [ ] Group management
     - [ ] Create group
@@ -48,6 +48,7 @@
 ## Features
 
 - Registration of User accounts
+- Login to receive a jwt for authentication
 
 > Take a look at the [roadmap](#roadmap-) to see which features are planned for the future. \
 > You can also create a pull request, issue, discussion, etc. to suggest a new feature.

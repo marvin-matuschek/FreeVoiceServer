@@ -31,51 +31,20 @@ FreeVoiceServer is a **Symfony project running with Docker**.
 1. Start Docker containers:
 
     ```bash
-    docker-compose up -d
+    docker compose up -d
     ```
 
 2. Access the app container:
 
     ```bash
-    docker exec -it free-voice-server-app bash
+    docker compose exec app bash
     ```
 
-3. Install PHP dependencies inside the container using Composer:
+3. Run the setup script:
 
     ```bash
-    composer install
+    composer setup
     ```
-
-4. Run Symfony commands as needed inside the container:
-
-    ```bash
-    php bin/console <command>
-    ```
-
-### Setup Database
-
-1. Create the database:
-
-    ```bash
-    php bin/console doctrine:database:create
-    php bin/console doctrine:schema:create
-    ```
-
-2. Update the database if you already had a previous version of the schema:
-
-    ```bash
-    php bin/console migrations:migrate
-    ```
-
-    If your database doesn't contain any important data, you can also use:
-
-    ```bash
-    php bin/console doctrine:schema:update --force
-    ```
-   
-    > Note: Using `doctrine:schema:update --force` is not recommended for production environments, but it can be useful during development to quickly apply schema changes without creating migration files.
-
----
 
 ## 3. Creating a Branch
 
@@ -119,8 +88,10 @@ Pull Requests should only be submitted if both checks pass successfully.
 2. Open a **Pull Request** against the `main` branch.  
 3. Include the **reason for your changes**:
 
-    > Describe **why** the changes are needed, not just what they do.
-    > Add all relevant labels that match the PR. Don't hesitate to add the “help wanted” label if you are unsure about how to proceed.
+    > Describe **why** the changes are needed, not just what they do. \
+      Add all relevant labels that match the PR.
+
+   > Don't hesitate to add the “help wanted” label if you are unsure about how to proceed.
 
 4. After submission, maintainers will review your PR and may request changes.
 

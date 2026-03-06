@@ -1,5 +1,9 @@
 # API endpoints
 
+- [Identity](#Identity)
+  - [Registration](#Registration)
+  - [Login](#Login)
+
 ## Identity
 
 ### Registration
@@ -32,5 +36,34 @@ Responses:
 }
 {
   "message": "User registration failed because the provided user data is invalid: [...]"
+}
+```
+
+### Login
+
+#### POST /login
+
+Request body:
+
+```json
+{
+  "username": "string",
+  "password": "string"
+}
+```
+
+Responses:
+
+```json
+200 OK
+{
+  "token": "string"
+}
+```
+
+```json
+400 Bad Request
+{
+  "message": "Missing or invalid data provided."
 }
 ```
