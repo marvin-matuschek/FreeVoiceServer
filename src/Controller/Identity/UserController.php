@@ -44,7 +44,8 @@ class UserController extends AbstractController
     }
 
     #[Route('/login', name: 'identity_login', methods: ['POST'])]
-    public function login(): Response {
+    public function login(): Response
+    {
         return new JsonResponse(['message' => 'Missing or invalid data provided.'], Response::HTTP_BAD_REQUEST);
     }
 }
