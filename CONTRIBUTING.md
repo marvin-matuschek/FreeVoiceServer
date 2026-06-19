@@ -15,12 +15,6 @@ This guide explains how to get started with development and submit your changes.
     git clone https://github.com/<your-username>/FreeVoiceServer.git
     cd FreeVoiceServer
     ```
-
-3. Add the upstream repository (optional, to keep your fork up-to-date):
-
-    ```bash
-    git remote add upstream https://github.com/<original-org>/FreeVoiceServer.git
-    ```
 ---
 
 
