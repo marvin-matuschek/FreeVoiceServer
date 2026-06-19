@@ -8,7 +8,8 @@ use PhpCsFixer\Finder;
 $finder = new Finder()
     ->in(__DIR__)
     ->exclude('var')
-    ->exclude('vendor');
+    ->exclude('vendor')
+    ->notName('reference.php');
 
 return new Config()
     ->setRules([
