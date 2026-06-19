@@ -70,4 +70,22 @@ readonly class UserService
 
         return $user;
     }
+
+    /**
+     * @throws InvalidArgumentException
+     */
+    public function resetPassword(User $user, string $newRawPassword): User
+    {
+        $user->setPassword($this->passwordHasher->hashPassword($user, $newRawPassword));
+
+        $errors = $this->validator->validate($user);
+
+        if (count($errors) > 0) {
+            throw new InvalidArgumentException('Password reset failed because the provided data is invalid: ' . $errors);
+        }
+
+        $this->entityManager->flush();
+
+        return $user;
+    }
 }
