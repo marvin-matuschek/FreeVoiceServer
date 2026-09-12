@@ -1,56 +1,29 @@
-# FreeVoice - Server
+# FreeVoice
 
-  FreeVoice is an open-source project that provides decentralized voice chat and text communication, focusing on privacy, openness, and independence from centralized platforms. 🚀
+FreeVoice is an open-source project that provides decentralized voice chat and text communication, focusing on privacy, openness, and independence from centralized platforms. 🚀
 
 ---
 
-  This repository is the home of the FreeVoice server — the heart ❤️ of this project. \
-  It is the home for user accounts and is responsible for managing groups and communication between clients. \
-  
-  Once the FreeVoice server is ready for use, the development of a FreeVoice client will also begin. \
-  This will allow users to communicate via any FreeVoice server in the form of a desktop application. \
-  The separation between the FreeVoice server and client will enable others to provide alternative clients, allowing for even freer, more secure, and more independent communication.
+This repository is the home of FreeVoice — the heart ❤️ of this project. \
+It contains the complete FreeVoice platform in one place: backend services, mailing, and UI. \
 
 ---
 
 ## Overview
 
-- [FreeVoice](#freevoice---server)
+- [FreeVoice](#freevoice)
 - [Overview](#Overview)
-- [Roadmap](#roadmap-)
-- [Features](#Features)
+- [Features & Roadmap](#features--roadmap-)
 - [API-Endpoints](#API-Endpoints)
 - [Contributing](#Contributing)
 
 ---
 
-## Roadmap 🚀
+## Features & Roadmap 🚀
 
-- [ ] User accounts
-  - [X] Registration
-  - [X] Login
-  - [ ] Password reset
-- [ ] Group management
-    - [ ] Create group
-    - [ ] Join group
-    - [ ] Leave group
-    - [ ] User-Management for group-admins
-- [ ] Text-Chats for groups
-- [ ] Cross-server communication
-  - [ ] Compatibility-checks between servers
-  - [ ] Join groups on other servers
-  - [ ] Text communication between servers
-- [ ] Voice communication (Audio & Video)
-- [ ] End-to-end encryption for text and voice communication
+Checkout the [FreeVoice Todos](https://github.com/users/marvin-matuschek/projects/1) to see which features are planned for the future.
 
----
-
-## Features
-
-- Registration of User accounts
-- Login to receive a jwt for authentication
-
-> Take a look at the [roadmap](#roadmap-) to see which features are planned for the future. \
+> Take a look at the todos to see which features are planned for the future. \
 > You can also create a pull request, issue, discussion, etc. to suggest a new feature.
 
 ## API-Endpoints
@@ -61,5 +34,4 @@ Check out the [API documentation](docs/API.md) to learn more about the available
 
 ## Contributing
 
-  Checkout [CONTRIBUTING.md](CONTRIBUTING.md) to learn more about this topic!
-
+Checkout [CONTRIBUTING.md](CONTRIBUTING.md) to learn more about this topic!
