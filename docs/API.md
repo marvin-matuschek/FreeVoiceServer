@@ -67,3 +67,38 @@ Responses:
   "message": "Missing or invalid data provided."
 }
 ```
+
+### Reset Password
+
+#### POST /reset-password
+
+Request body:
+
+```json
+{
+  "password": "string",
+  "password_confirmation": "string"
+}
+```
+
+Responses:
+
+```json
+200 OK
+{
+  "message": "Password reset."
+}
+```
+
+```json
+400 Bad Request
+{
+  "message": "Missing or invalid data provided."
+}
+{
+  "message": "Password and password confirmation do not match."
+}
+{
+  "message": "Password reset failed because the provided data is invalid: [...]"
+}
+```

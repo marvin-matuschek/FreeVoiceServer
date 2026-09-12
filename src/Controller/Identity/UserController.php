@@ -48,4 +48,30 @@ class UserController extends AbstractController
     {
         return new JsonResponse(['message' => 'Missing or invalid data provided.'], Response::HTTP_BAD_REQUEST);
     }
+
+    #[Route('/reset-password', name: 'identity_reset_password', methods: ['POST'])]
+    public function resetPassword(Request $request): Response
+    {
+        $rawPassword = $request->request->get('password');
+        $rawPasswordConfirmation = $request->request->get('password_confirmation');
+
+        if (!is_string($rawPassword) || !is_string($rawPasswordConfirmation)) {
+            return new JsonResponse(['message' => 'Missing or invalid data provided.'], Response::HTTP_BAD_REQUEST);
+        }
+
+        if ($rawPassword !== $rawPasswordConfirmation) {
+            return new JsonResponse(['message' => 'Password and password confirmation do not match.'], Response::HTTP_BAD_REQUEST);
+        }
+
+        /** @var User $user */
+        $user = $this->getUser();
+
+        try {
+            $this->userService->resetPassword($user, $rawPassword);
+        } catch (InvalidArgumentException $e) {
+            return new JsonResponse(['message' => $e->getMessage()], Response::HTTP_BAD_REQUEST);
+        }
+
+        return new JsonResponse(['message' => 'Password reset.']);
+    }
 }
