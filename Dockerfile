@@ -1,7 +1,7 @@
-FROM webdevops/php-nginx:8.4
+FROM webdevops/php-nginx:8.5
 
 RUN pecl update-channels \
-    && pecl install xdebug-3.4.1 \
+    && pecl install xdebug \
     && docker-php-ext-enable xdebug \
     && pecl clear-cache \
     && rm -rf /tmp/pear

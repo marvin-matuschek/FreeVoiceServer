@@ -4,12 +4,12 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.4 <8.5",
+        "php": ">=8.5 <8.6",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "doctrine/doctrine-bundle": "^3.2.4",
-        "doctrine/doctrine-migrations-bundle": "^4.0",
-        "doctrine/orm": "^3.6.7",
+        "doctrine/doctrine-bundle": "^3.3.2",
+        "doctrine/doctrine-migrations-bundle": "^4.0.1",
+        "doctrine/orm": "^3.7.0",
         "lexik/jwt-authentication-bundle": "^3.2",
         "symfony/console": "8.1.*",
         "symfony/dotenv": "8.1.*",
@@ -22,8 +22,8 @@
         "symfony/yaml": "8.1.*"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.95.10",
-        "phpstan/phpstan": "^2.2.2",
+        "friendsofphp/php-cs-fixer": "^3.95.25",
+        "phpstan/phpstan": "^2.2.13",
         "symfony/maker-bundle": "^1.67"
     },
     "config": {
