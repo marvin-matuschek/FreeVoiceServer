@@ -6,7 +6,7 @@ services:
     depends_on:
       - mariadb
     restart: unless-stopped
-    container_name: free-voice-server-app
+    container_name: free-voice-app
     ports:
       - "12044:80"
     volumes:
@@ -17,7 +17,7 @@ services:
       WEB_DOCUMENT_INDEX: index.php
       PHP_DATE_TIMEZONE: Europe/Berlin
     networks:
-      - free-voice-server-network
+      - free-voice-network
 
   mariadb:
     image: mariadb:11.7.2
@@ -26,7 +26,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
     networks:
-      - free-voice-server-network
+      - free-voice-network
 
   phpmyadmin:
     image: phpmyadmin
@@ -38,10 +38,10 @@ services:
     environment:
       PMA_HOST: mariadb
     networks:
-      - free-voice-server-network
+      - free-voice-network
 
 networks:
-  free-voice-server-network:
+  free-voice-network:
 
 volumes:
   database:

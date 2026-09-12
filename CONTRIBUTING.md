@@ -1,4 +1,4 @@
-# Contributing to FreeVoiceServer
+# Contributing to FreeVoice
 
 We welcome contributions! Whether you’re fixing a bug, adding a feature, or improving documentation, your help is appreciated.  
 
@@ -12,15 +12,15 @@ This guide explains how to get started with development and submit your changes.
 2. Clone your fork locally:
 
     ```bash
-    git clone https://github.com/<your-username>/FreeVoiceServer.git
-    cd FreeVoiceServer
+    git clone https://github.com/<your-username>/FreeVoice.git
+    cd FreeVoice
     ```
 ---
 
 
 ## 2. Development Setup
 
-FreeVoiceServer is a **Symfony project running with Docker**.
+FreeVoice is a **Symfony project running with Docker**.
 
 1. Start Docker containers:
 
@@ -99,4 +99,4 @@ Pull Requests should only be submitted if both checks pass successfully.
 
 ## 7. Thank You
 
-Your contributions make FreeVoiceServer better and more open. Thank you for helping us build a free, decentralized communication platform.
+Your contributions make FreeVoice better and more open. Thank you for helping us build a free, decentralized communication platform.
