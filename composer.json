@@ -24,6 +24,7 @@
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.95.25",
         "phpstan/phpstan": "^2.2.13",
+        "rector/rector": "^2.6",
         "symfony/maker-bundle": "^1.67"
     },
     "config": {
@@ -68,11 +69,20 @@
         "post-update-cmd": [
             "@auto-scripts"
         ],
-        "fix-cs": [
+        "php-cs-fixer:dry": [
+          "php vendor/bin/php-cs-fixer fix --dry-run --diff"
+        ],
+        "php-cs-fixer:fix": [
           "php vendor/bin/php-cs-fixer fix"
         ],
         "phpstan": [
           "vendor/bin/phpstan"
+        ],
+        "rector:dry": [
+          "vendor/bin/rector process --dry-run"
+        ],
+        "rector:fix": [
+          "vendor/bin/rector process"
         ],
         "setup": [
           "composer install",

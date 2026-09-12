@@ -20,7 +20,6 @@ class ServerRepository extends ServiceEntityRepository
     }
 
     /**
-     * @return Server
      * @throws LogicException if no server is found in the database
      */
     public function findLocalServer(): Server

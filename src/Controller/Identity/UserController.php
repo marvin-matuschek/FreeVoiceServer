@@ -68,8 +68,8 @@ class UserController extends AbstractController
 
         try {
             $this->userService->resetPassword($user, $rawPassword);
-        } catch (InvalidArgumentException $e) {
-            return new JsonResponse(['message' => $e->getMessage()], Response::HTTP_BAD_REQUEST);
+        } catch (InvalidArgumentException $invalidArgumentException) {
+            return new JsonResponse(['message' => $invalidArgumentException->getMessage()], Response::HTTP_BAD_REQUEST);
         }
 
         return new JsonResponse(['message' => 'Password reset.']);

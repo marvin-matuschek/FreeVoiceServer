@@ -21,8 +21,8 @@ readonly class SetupCommand
     {
         try {
             $this->serverService->setup();
-        } catch (LogicException $e) {
-            $output->writeln("<error>{$e->getMessage()}</error>");
+        } catch (LogicException $logicException) {
+            $output->writeln("<error>{$logicException->getMessage()}</error>");
             return Command::FAILURE;
         }
 

@@ -21,8 +21,6 @@ readonly class ServerService
      * This method should only be called once in the applications lifetime, as it creates a new unique global server ID.
      * The global server ID should never be changed after it has been created, as it is used to identify the server against other servers.
      *
-     * @return Server
-     *
      * @throws LogicException if a server already exists in the database
      */
     public function setup(): Server
