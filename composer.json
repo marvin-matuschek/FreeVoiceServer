@@ -68,7 +68,10 @@
         "post-update-cmd": [
             "@auto-scripts"
         ],
-        "fix-cs": [
+        "php-cs-fixer:dry": [
+          "php vendor/bin/php-cs-fixer fix --dry-run --diff"
+        ],
+        "php-cs-fixer:fix": [
           "php vendor/bin/php-cs-fixer fix"
         ],
         "phpstan": [

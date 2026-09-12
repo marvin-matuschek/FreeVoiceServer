@@ -58,7 +58,7 @@ Before submitting a Pull Request, please ensure the following checks pass inside
 ### Code style (PHP-CS-Fixer)
 
 ```bash
-composer fix-cs
+composer php-cs-fixer:fix
 ```
 
 ### Static analysis (PHPStan)
