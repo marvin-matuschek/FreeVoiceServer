@@ -55,15 +55,9 @@ FreeVoice is a **Symfony project running with Docker**.
 
 Before submitting a Pull Request, please ensure the following checks pass inside the container:
 
-### Code style (PHP-CS-Fixer)
-
 ```bash
-composer php-cs-fixer:fix
-```
-
-### Static analysis (PHPStan)
-
-```bash
+composer php-cs-fixer:dry   # use `composer php-cs-fixer:fix` to fix issues automatically
+composer rector:dry         # use `composer rector:fix` to apply automatic refactoring
 composer phpstan
 ```
 
